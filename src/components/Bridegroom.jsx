@@ -59,16 +59,16 @@ function Bridegroom() {
                     Johnny Diaz <i className='ti-heart'></i>
                   </h6>{' '}
                   <span>The Groom</span>
-                  <p>Johnny is awesome! the best so best!</p>
+                  <p>Johnny is awesome! the best so best!Love you so much</p>
                   <div className='social'>
                     <div className='full-width'>
                       <a
-                        href='https://www.instagram.com/johnny/'
+                        href='https://www.instagram.com/mrbullettproof/'
                         className='icon'
                         target='_blank'
                         rel='noopener noreferrer'
                       >
-                        {'@johnny '}
+                        {'@johnny'}
                         <i className='ti-instagram'></i>
                       </a>
                       {/* Instagram link for the groom */}
