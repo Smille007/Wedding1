@@ -15,31 +15,28 @@ function Organization () {
             <h2 className='custom-font numb'>01</h2>
             <h6 className='title'>Ceremony</h6>
             <p>
-              Delta tristiu the jusone duise vitae diam neque nivami mis est
-              augue artine aringilla the at elit finibus vivera.
+              Begins promptly at 5 pm 
             </p>
           </div>
           <div className='col-md-3 item-box'>
             <h2 className='custom-font numb'>02</h2>
             <h6 className='title'>Cocktail Hour</h6>
             <p>
-              Delta tristiu the jusone duise vitae diam neque nivami mis est
-              augue artine aringilla the at elit finibus vivera.
+              {/*6 pm, Dinner afterward*/}
             </p>
           </div>
           <div className='col-md-3 item-box'>
             <h2 className='custom-font numb'>03</h2>
             <h6 className='title'>Party</h6>
             <p>
-              Delta tristiu the jusone duise vitae diam neque nivami mis est
-              augue artine aringilla the at elit finibus vivera.
+              {/*Following dinner */}
             </p>
           </div>
           <div className='col-md-3 item-box'>
             <h2 className='custom-font numb'>04</h2>
             <h6 className='title'>Cake Cutting</h6>
             <p>
-              TBA
+              {/*TBA*/}
               
             
 
