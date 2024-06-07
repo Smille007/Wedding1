@@ -1,7 +1,8 @@
-
-import Bride from '..//assets/bride.jpg';
-import Groom from '..//assets/groom.jpg';
+import React from 'react';
+import Bride from '../assets/bride.jpg';
+import Groom from '../assets/groom.jpg';
 import 'run-parallel';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Bridegroom() {
   return (
@@ -14,18 +15,15 @@ function Bridegroom() {
               data-animate-effect='fadeInLeft'
             >
               <div className='img'>
-                {' '}
-                <img src={Bride} alt='Bride' />{' '}
+                <img src={Bride} alt='Bride' />
               </div>
               <div className='info valign'>
                 <div className='full-width'>
                   <h6>
                     Daryna Vershinina <i className='ti-heart'></i>
-                  </h6>{' '}
+                  </h6>
                   <span>The Bride</span>
-                  <p>
-                    Daryna is the best star you can manage to find in a world!
-                  </p>
+                  <p>Daryna is the best star you can manage to find in a world!</p>
                   <div className='social'>
                     <div className='full-width'>
                       <a
@@ -34,10 +32,27 @@ function Bridegroom() {
                         target='_blank'
                         rel='noopener noreferrer'
                       >
-                        {'@smille007 '}
-                        <i className='ti-instagram'></i>
+                        <i className='fab fa-instagram'></i>
                       </a>
                       {/* Instagram link for the bride */}
+                      <a
+                        href='mailto:smille007@gmail.com'
+                        className='icon'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <i className='far fa-envelope'></i>
+                      </a>
+                      {/* Email link for the bride */}
+                      <a
+                        href='https://wa.me/+19175703587'
+                        className='icon'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <i className='fab fa-whatsapp'></i>
+                      </a>
+                      {/* WhatsApp link for the bride */}
                     </div>
                   </div>
                 </div>
@@ -50,14 +65,13 @@ function Bridegroom() {
               data-animate-effect='fadeInRight'
             >
               <div className='img'>
-                {' '}
-                <img src={Groom} alt='Groom' />{' '}
+                <img src={Groom} alt='Groom' />
               </div>
               <div className='info valign'>
                 <div className='full-width'>
                   <h6>
                     Johnny Diaz <i className='ti-heart'></i>
-                  </h6>{' '}
+                  </h6>
                   <span>The Groom</span>
                   <p>Johnny is awesome! the best so best!Love you so much</p>
                   <div className='social'>
@@ -68,10 +82,27 @@ function Bridegroom() {
                         target='_blank'
                         rel='noopener noreferrer'
                       >
-                        {'@johnny'}
-                        <i className='ti-instagram'></i>
+                        <i className='fab fa-instagram'></i>
                       </a>
                       {/* Instagram link for the groom */}
+                      <a
+                        href='mailto:johnnyelvisjr@gmail.com'
+                        className='icon'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <i className='far fa-envelope'></i>
+                      </a>
+                      {/* Email link for the groom */}
+                      <a
+                        href='https://wa.me/+19179759860'
+                        className='icon'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <i className='fab fa-whatsapp'></i>
+                      </a>
+                      {/* WhatsApp link for the groom */}
                     </div>
                   </div>
                 </div>

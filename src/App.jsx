@@ -12,7 +12,7 @@ import Sidebar from './components/Sidebar.jsx';
 import Story from './components/Story.jsx';
 import Where from './components/Where.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 
 

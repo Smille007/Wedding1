@@ -39,7 +39,8 @@ function Organization () {
             <h2 className='custom-font numb'>04</h2>
             <h6 className='title'>Cake Cutting</h6>
             <p>
-              TBA
+            Delta tristiu the jusone duise vitae diam neque nivami mis est
+              augue artine aringilla the at elit finibus vivera.
               
             
 
