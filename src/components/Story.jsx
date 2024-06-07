@@ -26,19 +26,11 @@ function Story () {
               to get to know each other.  Friendships blossomed and 
               it was decided to join Daryna for her birthday in Tulum. 
               It was there that Daryna and Johnny fell in love having 
-              long talks from sunset to sunrise.  
-            </p>
-  
-            <p>
-             {/* Phasellus viverra tristique justo duis vitae diam neque nivamus ac
-              est augue artine aringilla dui at elit finibus viverra nec a
-              lacus. Nedana themo eros odio semper soe suscipit non. Curabit
-              aliquet orci elit genes tristique.*/}
+              long talks from sunset to sunrise.   {/*  Write it like we telling the story. change 'Daryna and Johnny' to 'We'*/}
             </p>
             <h4>Oct 17th, 2022, she said yes!</h4>
             <p>
-            {/*  Luality fringilla duiman at elit finibus viverra nec a lacus themo
-              the druanye sene sollicitudin mi suscipit non sagie the fermen.*/}
+            {/*  Here write how you proposed to me in Azores*/}
             </p>
           </div>
         </div>
