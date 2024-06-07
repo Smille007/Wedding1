@@ -73,7 +73,9 @@ function Bridegroom() {
                     Johnny Diaz <i className='ti-heart'></i>
                   </h6>
                   <span>The Groom</span>
-                  <p>Johnny is awesome! the best so best!Love you so much</p>
+                  <p>
+                  {/*Johnny was born and raised in NY and in the Dominican Republic*/}
+                  </p>
                   <div className='social'>
                     <div className='full-width'>
                       <a
