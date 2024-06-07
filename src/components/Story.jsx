@@ -28,10 +28,7 @@ function Story () {
               It was there that Daryna and Johnny fell in love having 
               long talks from sunset to sunrise.  
             </p>
-            <p>
-              {/*Luality fringilla duiman at elit vinibus viverra nec a lacus themo
-              the druanye sene sollicitudin mi suscipit non sagie the fermen.*/}
-            </p>
+  
             <p>
              {/* Phasellus viverra tristique justo duis vitae diam neque nivamus ac
               est augue artine aringilla dui at elit finibus viverra nec a
