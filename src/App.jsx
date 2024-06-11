@@ -29,7 +29,7 @@ function App() {
       setIsSubmitted(true); // Set state to true after successful submission
     } catch (error) {
       console.error('Error submitting RSVP:', error);
-      // Handle error (e.g., show an error message)
+    
     }
   };
 
