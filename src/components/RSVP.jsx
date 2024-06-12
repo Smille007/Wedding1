@@ -24,7 +24,7 @@ function RSVP() {
       const response = await axios.post('https://wedding-back-atc8.onrender.com/', formData);
       console.log('RSVP submitted:', response.data);
       setSubmitSuccess(true); // Set submitSuccess to true after successful form submission
-      setFormData({ // Reset form fields
+      setFormData({ // Reset form feild
         fullName: '',
         email: '',
         guests: '',

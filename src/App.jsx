@@ -6,30 +6,25 @@ import Footer from './components/Footer.jsx';
 import Gallery from './components/Gallery.jsx';
 import Header from './components/Header.jsx';
 import Organization from './components/Organization.jsx';
-import RSVP from './components/RSVP.jsx'
+import RSVP from './components/RSVP.jsx';
 import Seeyou from './components/Seeyou.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import Story from './components/Story.jsx';
 import Where from './components/Where.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css'
-
-
-
-
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const backend = import.meta.env.BACKEND_URL || "http://localhost:4005";
+  const [isSubmitted, setIsSubmitted] = useState(false); // Initialize state
 
   const handleRSVPSubmit = async (formData) => {
     try {
-      const response = await axios.post('https://wedding-back-atc8.onrender.com/rsvp', formData);
+      const response = await axios.post(`${backend}/rsvp`, formData); // Dynamic endpoint
       console.log('RSVP submitted:', response.data);
       setIsSubmitted(true); // Set state to true after successful submission
     } catch (error) {
       console.error('Error submitting RSVP:', error);
-    
     }
   };
 
@@ -45,8 +40,11 @@ function App() {
         <Organization />
         <Gallery />
         <Where />
-        {isSubmitted ? ( // Render ThankYou component if RSVP is submitted
-          <ThankYou />
+        {isSubmitted ? ( // Render thank you message if RSVP is submitted
+          <div className="thank-you-message">
+            <h2>Thank You for Your RSVP!</h2>
+            <p>We look forward to seeing you at the wedding.</p>
+          </div>
         ) : ( // Render RSVP component if RSVP is not yet submitted
           <RSVP onSubmit={handleRSVPSubmit} />
         )}
