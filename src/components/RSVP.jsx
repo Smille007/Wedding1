@@ -36,7 +36,7 @@ function RSVP({ backendUrl, onSubmit }) {
         onSubmit(response.data);
       }
     } catch (error) {
-      console.error('Error submitting RSVP:', error);
+      console.error('Error submitting rsvp:', error);
       setError(error.message); // Set error state
     }
   };
