@@ -23,7 +23,7 @@ function RSVP({ backendUrl, onSubmit }) {
     e.preventDefault();
     setError(null); // Reset error state
     try {
-      const response = await axios.post(`${backendUrl}/rsvp`, formData);
+      const response = await axios.post(`${backendUrl}`, formData);
       console.log('rsvp submitted:', response.data);
       setSubmitSuccess(true);
       setFormData({
