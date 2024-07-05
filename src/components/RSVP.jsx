@@ -1,15 +1,16 @@
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import 'run-parallel';
+import PropTypes from 'prop-types';
 
-function RSVP() {
+function RSVP({ backendUrl, onSubmit }) {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
     guests: '',
     msg: ''
   });
-  const [submitSuccess, setSubmitSuccess] = useState(false); // State to track form submission success
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [error, setError] = useState(null); // State to track error
 
   const handleChange = (e) => {
     setFormData({
@@ -20,19 +21,23 @@ function RSVP() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(null); // Reset error state
     try {
-      const response = await axios.post('https://wedding-back-atc8.onrender.com/', formData);
+      const response = await axios.post(`${backendUrl}/rsvp`, formData);
       console.log('RSVP submitted:', response.data);
-      setSubmitSuccess(true); // Set submitSuccess to true after successful form submission
-      setFormData({ // Reset form feild
+      setSubmitSuccess(true);
+      setFormData({
         fullName: '',
         email: '',
         guests: '',
         msg: ''
       });
+      if (onSubmit) {
+        onSubmit(response.data);
+      }
     } catch (error) {
       console.error('Error submitting RSVP:', error);
-      // Handle error (e.g., show an error message)
+      setError(error.message); // Set error state
     }
   };
 
@@ -61,7 +66,7 @@ function RSVP() {
               <div className='col-md-12'>
                 <div className='form-group'>
                   <input
-                    type='text'
+                    type='email'
                     className='form-control'
                     placeholder='Email'
                     name='email'
@@ -74,7 +79,7 @@ function RSVP() {
               <div className='col-md-12'>
                 <div className='form-group'>
                   <input
-                    type='text'
+                    type='number'
                     className='form-control'
                     placeholder='Guests (total number of guests including yourself)'
                     name='guests'
@@ -113,11 +118,25 @@ function RSVP() {
                 </div>
               </div>
             )}
+            {error && (
+              <div className='col-md-12'>
+                <div className='form-group'>
+                  <div className="error-message">
+                    <p>Error: {error}</p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+RSVP.propTypes = {
+  backendUrl: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func
+};
 
 export default RSVP;

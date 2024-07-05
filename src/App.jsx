@@ -16,13 +16,13 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   const backend = import.meta.env.BACKEND_URL || "http://localhost:4005";
-  const [isSubmitted, setIsSubmitted] = useState(false); // Initialize state
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleRSVPSubmit = async (formData) => {
     try {
-      const response = await axios.post(`${backend}/rsvp`, formData); // Dynamic endpoint
+      const response = await axios.post(`${backend}/rsvp`, formData);
       console.log('RSVP submitted:', response.data);
-      setIsSubmitted(true); // Set state to true after successful submission
+      setIsSubmitted(true);
     } catch (error) {
       console.error('Error submitting RSVP:', error);
     }
@@ -40,13 +40,13 @@ function App() {
         <Organization />
         <Gallery />
         <Where />
-        {isSubmitted ? ( // Render thank you message if RSVP is submitted
+        {isSubmitted ? (
           <div className="thank-you-message">
             <h2>Thank You for Your RSVP!</h2>
             <p>We look forward to seeing you at the wedding.</p>
           </div>
-        ) : ( // Render RSVP component if RSVP is not yet submitted
-          <RSVP onSubmit={handleRSVPSubmit} />
+        ) : (
+          <RSVP backendUrl={backend} onSubmit={handleRSVPSubmit} />
         )}
         <Footer />
       </div>
