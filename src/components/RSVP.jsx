@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
-function RSVP({ backendUrl, onSubmit }) {
+function rsvp({ backendUrl, onSubmit }) {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -134,9 +134,9 @@ function RSVP({ backendUrl, onSubmit }) {
   );
 }
 
-RSVP.propTypes = {
+rsvp.propTypes = {
   backendUrl: PropTypes.string.isRequired,
   onSubmit: PropTypes.func
 };
 
-export default RSVP;
+export default rsvp;
