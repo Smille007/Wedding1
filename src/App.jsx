@@ -21,10 +21,10 @@ function App() {
   const handleRSVPSubmit = async (formData) => {
     try {
       const response = await axios.post(`${backend}/rsvp`, formData);
-      console.log('RSVP submitted:', response.data);
+      console.log('rsvp submitted:', response.data);
       setIsSubmitted(true);
     } catch (error) {
-      console.error('Error submitting RSVP:', error);
+      console.error('Error submitting rsvp:', error);
     }
   };
 

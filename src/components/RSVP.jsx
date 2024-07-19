@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
-function rsvp({ backendUrl, onSubmit }) {
+function RSVP({ backendUrl, onSubmit }) {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -24,7 +24,7 @@ function rsvp({ backendUrl, onSubmit }) {
     setError(null); // Reset error state
     try {
       const response = await axios.post(`${backendUrl}`, formData);
-      console.log('rsvp submitted:', response.data);
+      console.log('RSVP submitted:', response.data);
       setSubmitSuccess(true);
       setFormData({
         fullName: '',
@@ -36,7 +36,7 @@ function rsvp({ backendUrl, onSubmit }) {
         onSubmit(response.data);
       }
     } catch (error) {
-      console.error('Error submitting rsvp:', error);
+      console.error('Error submitting RSVP:', error);
       setError(error.message); // Set error state
     }
   };
@@ -134,9 +134,9 @@ function rsvp({ backendUrl, onSubmit }) {
   );
 }
 
-rsvp.propTypes = {
+RSVP.propTypes = {
   backendUrl: PropTypes.string.isRequired,
   onSubmit: PropTypes.func
 };
 
-export default rsvp;
+export default RSVP;
