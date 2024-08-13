@@ -10,7 +10,7 @@ function RSVP({ backendUrl, onSubmit }) {
     msg: ''
   });
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [error, setError] = useState(null); // State to track error
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -21,9 +21,10 @@ function RSVP({ backendUrl, onSubmit }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(null); // Reset error state
+    setError(null);
     try {
-      const response = await axios.post(`${backendUrl}`, formData);
+      console.log('Submitting to URL:', `${backendUrl}/rsvp`);
+      const response = await axios.post(`${backendUrl}/rsvp`, formData);
       console.log('RSVP submitted:', response.data);
       setSubmitSuccess(true);
       setFormData({
@@ -37,7 +38,7 @@ function RSVP({ backendUrl, onSubmit }) {
       }
     } catch (error) {
       console.error('Error submitting RSVP:', error);
-      setError(error.message); // Set error state
+      setError(error.response ? error.response.data : error.message);
     }
   };
 
@@ -49,67 +50,68 @@ function RSVP({ backendUrl, onSubmit }) {
             <span className='oliven-title-meta text-center'>Will you attend?</span>
             <h2 className='oliven-title text-center'>R.S.V.P</h2>
             <br />
-            <form onSubmit={handleSubmit} className='row'>
-              <div className='col-md-12'>
-                <div className='form-group'>
-                  <input
-                    type='text'
-                    className='form-control'
-                    placeholder='Full Name'
-                    name='fullName'
-                    value={formData.fullName}
-                    onChange={handleChange}
-                    required
-                  />{' '}
+            {!submitSuccess ? (
+              <form onSubmit={handleSubmit} className='row'>
+                <div className='col-md-12'>
+                  <div className='form-group'>
+                    <input
+                      type='text'
+                      className='form-control'
+                      placeholder='Full Name'
+                      name='fullName'
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className='col-md-12'>
-                <div className='form-group'>
-                  <input
-                    type='email'
-                    className='form-control'
-                    placeholder='Email'
-                    name='email'
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />{' '}
+                <div className='col-md-12'>
+                  <div className='form-group'>
+                    <input
+                      type='email'
+                      className='form-control'
+                      placeholder='Email'
+                      name='email'
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className='col-md-12'>
-                <div className='form-group'>
-                  <input
-                    type='number'
-                    className='form-control'
-                    placeholder='Guests (total number of guests including yourself)'
-                    name='guests'
-                    value={formData.guests}
-                    onChange={handleChange}
-                    required
-                  />{' '}
+                <div className='col-md-12'>
+                  <div className='form-group'>
+                    <input
+                      type='number'
+                      className='form-control'
+                      placeholder='Guests (total number of guests including yourself)'
+                      name='guests'
+                      value={formData.guests}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className='col-md-12'>
-                <div className='form-group'>
-                  <textarea
-                    name='msg'
-                    id='message'
-                    cols='30'
-                    rows='7'
-                    className='form-control'
-                    placeholder='Message'
-                    value={formData.msg}
-                    onChange={handleChange}
-                  ></textarea>
+                <div className='col-md-12'>
+                  <div className='form-group'>
+                    <textarea
+                      name='msg'
+                      id='message'
+                      cols='30'
+                      rows='7'
+                      className='form-control'
+                      placeholder='Message'
+                      value={formData.msg}
+                      onChange={handleChange}
+                    ></textarea>
+                  </div>
                 </div>
-              </div>
-              <div className='col-md-12'>
-                <div className='form-group'>
-                  <input type='submit' className='btn buttono' value='SEND' />{' '}
+                <div className='col-md-12'>
+                  <div className='form-group'>
+                    <input type='submit' className='btn buttono' value='SEND' />
+                  </div>
                 </div>
-              </div>
-            </form>
-            {submitSuccess && (
+              </form>
+            ) : (
               <div className='col-md-12'>
                 <div className='form-group'>
                   <div className="success-message">

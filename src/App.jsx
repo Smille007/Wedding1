@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
-  const backend = import.meta.env.BACKEND_URL || "http://localhost:4005";
+  const backend = import.meta.env.VITE_BACKEND_URL || "http://localhost:4005";
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleRSVPSubmit = async (formData) => {
