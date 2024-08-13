@@ -13,7 +13,7 @@ function Organization () {
         <div className='row bord-box bg-img' data-background='images/slider.jpg'>
           <div className='col-md-3 item-box'>
             <h2 className='custom-font numb'>01</h2>
-            <h6 className='title'>Ceremony</h6>
+            <h6 className='title'>Church Ceremony</h6>
             <p>
                 {/*need more details, it's a church ceremony*/}
             </p>
@@ -27,7 +27,10 @@ function Organization () {
           </div>
           <div className='col-md-3 item-box'>
             <h2 className='custom-font numb'>03</h2>
-            <h6 className='title'>Party</h6>
+            <h6 className='title'>Party!🥳
+           
+    
+            </h6>
             <p>
                 {/*need more details*/}
             </p>

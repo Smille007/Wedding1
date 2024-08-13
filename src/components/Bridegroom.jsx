@@ -23,7 +23,7 @@ function Bridegroom() {
                     Daryna Vershinina <i className='ti-heart'></i>
                   </h6>
                   <span>The Bride</span>
-                  <p>Daryna is the best star you can manage to find in a world!</p>
+                  <p>Hello, dear friends and family! Hello, dear friends and family! We're absolutely delighted to welcome you to our wedding celebration. Get ready for a wonderful time filled with fantastic music and mouthwatering cuisine. We've put our hearts into planning every detail of this day, and we're thrilled to finally share it with all of you."</p>
                   <div className='social'>
                     <div className='full-width'>
                       <a
@@ -74,7 +74,7 @@ function Bridegroom() {
                   </h6>
                   <span>The Groom</span>
                   <p>
-                  {/*Johnny was born and raised in NY and in the Dominican Republic*/}
+                  Hello everyone! Daryna and I can't wait to celebrate our special day with all of you. We're so looking forward to sharing laughter, creating memories, and enjoying an unforgettable evening together. See you soon!
                   </p>
                   <div className='social'>
                     <div className='full-width'>

@@ -22,7 +22,11 @@ function Where () {
             <div className='content'>
               <h5>Wedding Ceremony</h5>
               <p>
-                <i className='ti-location-pin'></i> Secret!
+                <i className='ti-location-pin'></i> <b>Time:</b> 3:00 PM - 3:45pm<p></p>
+                <b>Location:</b><a href="https://www.google.com/maps?q=The+Basilica+of+St.+Patrick's+Old+Cathedral" target="_blank" rel="noopener noreferrer">The Basilica of St. Patrick's Old Cathedral.</a>(click on it!)<p></p>
+<b>Note:</b> Dear guests, we kindly request that you arrive promptly at 3:00 PM or a few minutes earlier. 
+The ceremony will begin exactly at 3:00 PM, and we wouldn't want you to miss a moment of our special day.
+The mass will last approximately 45 minutes and will feature carefully selected music to enhance this meaningful occasion. Surrounded by our beloved family and friends, we will exchange our vows in this beautiful, historic setting.
               </p>
               <p>
                 <i className='ti-time'></i> <span>2:00pm – 4:00pm</span>

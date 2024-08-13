@@ -1,10 +1,10 @@
 
 import gallery1 from '..//assets/1.jpg'
-import gallery2 from '..//assets/2.jpg'
-import gallery3 from '..//assets/3.jpg'
-import gallery4 from '..//assets/4.jpg'
-import gallery5 from '..//assets/5.jpg'
-import gallery6 from '..//assets/6.jpg'
+import gallery2 from '..//assets/2.jpeg'
+import gallery3 from '..//assets/3.jpeg'
+import gallery4 from '..//assets/4.jpeg'
+import gallery5 from '..//assets/5.jpeg'
+import gallery6 from '..//assets/6.jpeg'
 import 'run-parallel';
 
 function Gallery () {
@@ -32,7 +32,7 @@ function Gallery () {
                   />{' '}
                 </div>
                 <div className='gallery-detail'>
-                  <h4 className='mb-0'>Wedding Ceremony</h4>
+                  <h4 className='mb-0'>Wedding Party</h4>
                 </div>
               </div>
             </a>
@@ -49,7 +49,7 @@ function Gallery () {
                   />{' '}
                 </div>
                 <div className='gallery-detail'>
-                  <h4 className='mb-0'>Wedding Party</h4>{' '}
+                  <h4 className='mb-0'>Italy</h4>{' '}
                 </div>
               </div>
             </a>
@@ -66,7 +66,7 @@ function Gallery () {
                   />{' '}
                 </div>
                 <div className='gallery-detail'>
-                  <h4 className='mb-0'>Wedding Ceremony</h4>{' '}
+                  <h4 className='mb-0'>Azores Islands</h4>{' '}
                 </div>
               </div>
             </a>
@@ -83,7 +83,7 @@ function Gallery () {
                   />{' '}
                 </div>
                 <div className='gallery-detail'>
-                  <h4 className='mb-0'>Wedding Party</h4>{' '}
+                  <h4 className='mb-0'>Engagment Party</h4>{' '}
                 </div>
               </div>
             </a>
@@ -100,7 +100,7 @@ function Gallery () {
                   />{' '}
                 </div>
                 <div className='gallery-detail'>
-                  <h4 className='mb-0'>Wedding Ceremony</h4>{' '}
+                  <h4 className='mb-0'>Miami</h4>{' '}
                 </div>
               </div>
             </a>
@@ -117,7 +117,7 @@ function Gallery () {
                   />{' '}
                 </div>
                 <div className='gallery-detail'>
-                  <h4 className='mb-0'>Wedding Party</h4>{' '}
+                  <h4 className='mb-0'>New Years in Dominican Republic</h4>{' '}
                 </div>
               </div>
             </a>
