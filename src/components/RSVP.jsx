@@ -24,7 +24,7 @@ function RSVP({ backendUrl, onSubmit }) {
     setError(null);
     try {
       // Remove the trailing slash from backendUrl if it exists
-      const url = backendUrl.endsWith('/') ? `${backendUrl}rsvp` : `${backendUrl}/rsvp`;
+      const url = backendUrl.endsWith('/') ? `${backendUrl}` : `${backendUrl}/rsvp`;
       console.log('Submitting to URL:', url);
       const response = await axios.post(url, formData);
       console.log('RSVP submitted:', response.data);
