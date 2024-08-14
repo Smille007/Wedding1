@@ -29,7 +29,7 @@ The ceremony will begin exactly at 3:00 PM, and we wouldn't want you to miss a m
 The mass will last approximately 45 minutes and will feature carefully selected music to enhance this meaningful occasion. Surrounded by our beloved family and friends, we will exchange our vows in this beautiful, historic setting.
               </p>
               <p>
-                <i className='ti-time'></i> <span>2:00pm – 4:00pm</span>
+                {/* <i className='ti-time'></i> <span>2:00pm – 4:00pm</span> */}
               </p>
             </div>
           </div>
