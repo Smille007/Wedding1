@@ -23,7 +23,6 @@ function RSVP({ backendUrl, onSubmit }) {
     e.preventDefault();
     setError(null);
     try {
-      // Remove the trailing slash from backendUrl if it exists
       const url = backendUrl.endsWith('/') ? `${backendUrl}` : `${backendUrl}/rsvp`;
       console.log('Submitting to URL:', url);
       const response = await axios.post(url, formData);
@@ -83,9 +82,9 @@ function RSVP({ backendUrl, onSubmit }) {
                 <div className='col-md-12'>
                   <div className='form-group'>
                     <input
-                      type='number'
+                      type='text'
                       className='form-control'
-                      placeholder='Guests (total number of guests including yourself)'
+                      placeholder='Number of Guests, Including +1'
                       name='guests'
                       value={formData.guests}
                       onChange={handleChange}
@@ -101,7 +100,7 @@ function RSVP({ backendUrl, onSubmit }) {
                       cols='30'
                       rows='7'
                       className='form-control'
-                      placeholder='Message'
+                      placeholder='Please provide your food selection: beef or fish, dietary restrictions and let us know if you have any questions!  '
                       value={formData.msg}
                       onChange={handleChange}
                     ></textarea>
