@@ -23,7 +23,7 @@ function Bridegroom() {
                     Daryna Vershinina <i className='ti-heart'></i>
                   </h6>
                   <span>The Bride</span>
-                  <p>Hello, dear friends and family! We're absolutely delighted to welcome you to our wedding celebration. Get ready for a wonderful time filled with fantastic music and mouthwatering cuisine. We've put our hearts into planning every detail of this day, and we're thrilled to finally share it with all of you."</p>
+                  <p>Hello, dear friends and family! We're absolutely delighted to welcome you to our wedding celebration. Get ready for a wonderful time filled with fantastic music and mouthwatering cuisine. We've put our hearts into planning every detail of this day, and we're thrilled to finally share it with all of you.</p>
                   <div className='social'>
                     <div className='full-width'>
                       <a
